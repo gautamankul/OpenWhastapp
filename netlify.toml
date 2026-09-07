@@ -1,0 +1,11 @@
+cat << 'EOF' > /home/ubuntu/OpenWA/netlify.toml
+[build]
+  base = "dashboard"
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+EOF
